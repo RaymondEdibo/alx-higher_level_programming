@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def safe_print_division(a, b):
     try:
-        x = a/b
+        k = a/b
     except ZeroDivisionError:
-        x = None
+        k = None
     finally:
-        print("Inside result: {}".format(x))
-    return x
+        print("Inside result: {}".format(k))
+    return k
