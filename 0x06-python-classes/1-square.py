@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""class Square that defines a square"""
+
+
 class Square:
-    """Write a class Square that defines a square"""
-    def __init__(self, size_square):
-        """Module __init__ for size square"""
-        self.__size = size_square
+    """class Square that defines a square"""
+    __size = None
+
+    def __init__(self, size):
+        """Instation with size"""
+        self.__size = size
