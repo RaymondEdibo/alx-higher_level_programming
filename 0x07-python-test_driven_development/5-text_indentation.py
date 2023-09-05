@@ -1,15 +1,12 @@
 #!/usr/bin/python3
 """
-Module that defines function that prints a text
-with 2 new lines after each of these characters: ., ? and :.
-There should be no space at the beginning or at the end of each printed line
+prints a text with 2 new lines after
+each of these characters: ., ? and :
 """
 
 
 def text_indentation(text):
-    """
-    text must be a string.
-    function that prints a text with 2 new lines after ., ? and :."""
+    """function that prints a text with 2 new lines after ., ? and :."""
 
     if type(text) is not str:
         raise TypeError('text must be a string')
