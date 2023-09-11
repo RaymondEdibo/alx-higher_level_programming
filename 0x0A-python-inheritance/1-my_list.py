@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-
-
-"""Function that return the list of available attributes and methods"""
-
-
-def lookup(obj):
-    """return the list"""
-    return dir(obj)
+class MyList(list):
+    """
+   inherits from list
+    """
+    def print_sorted(self):
+        """
+        Public instance method: prints list,
+        but sorted (ascending)
+        """
+        print(sorted(self))
