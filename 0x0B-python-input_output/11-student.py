@@ -1,31 +1,28 @@
 #!/usr/bin/python3
-"""class Student which defines student"""
+"""Student module.
+
+Student class
+"""
 
 
-class Student:
-    """student data"""
+class Student():
+    """Defines Student."""
 
     def __init__(self, first_name, last_name, age):
+        """
+        Student object
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """return dictionary"""
-
-        if attrs is None or type(attrs) is not list:
-                return self.__dict__
-        else:
-            temp_list = {}
-            for element in attrs:
-                if type(element) is not str:
-                    return self.__dict__
-                if element in self.__dict__.keys():
-                    temp_list[element] = self.__dict__[element]
-            return temp_list
+        """dictionary representation"""
+        if attrs is not None:
+            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        return self.__dict__
 
     def reload_from_json(self, json):
-        """Replace all items on json"""
-
-        for items in json.keys():
-            self.__dict__[items] = json[items]
+        """Replaces all attributes of the Student instance."""
+        for k, v in json.items():
+            setattr(self, k, v)
