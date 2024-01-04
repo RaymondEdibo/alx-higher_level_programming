@@ -1,1 +1,1 @@
-0x14 - JavaScript - Objects, Scopes and Closures
+0x14. JavaScript - Web scraping
